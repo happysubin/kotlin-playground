@@ -1,6 +1,6 @@
 package project.numberbaseball.domain
 
-class Result(
+data class Result(
     val strike: Int = 0,
     val ball: Int = 0
 ) {
@@ -18,30 +18,19 @@ class Result(
             }
             return result
         }
-    }
 
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as Result
-
-        if (strike != other.strike) return false
-        if (ball != other.ball) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = strike
-        result = 31 * result + ball
-        return result
+        fun isContinue(result: Result ): Boolean {
+            if(result == Result(3, 0)) {
+                println("3개의 숫자를 모두 맞히셨습니다! 게임 종료")
+                return false;
+            }
+            return true;
+        }
     }
 
     override fun toString(): String {
-        return "Result(strike=$strike, ball=$ball)"
+        if(ball == 0 && strike == 0) return "아웃"
+        return "$ball 볼 $strike 스트라이크"
     }
-
-
 }
 
