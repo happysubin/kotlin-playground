@@ -12,7 +12,6 @@ class BaseBallGame(
 ) {
     fun play() {
         do {
-            //println("gameBalls = ${gameBalls}")
             val playerBalls = ballsReader.read()
             val result = gameBalls.play(playerBalls)
             resultView.print(result)
