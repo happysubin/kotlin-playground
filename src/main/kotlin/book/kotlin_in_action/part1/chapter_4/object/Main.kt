@@ -118,7 +118,7 @@ fun PersonV5.Companion.fromJson(json: String) : PersonV5 {
 fun countClicks(window: Window) {
     var clickCount = 0
 
-    //무명 객체를 활용
+    //무명 객체를 활용햣 
     window.addMouseListener(object: MouseAdapter() {
         override fun mouseClicked(e: MouseEvent?) {
             clickCount++
