@@ -1,4 +1,4 @@
-package book.kotlin_in_action.part_2.chapter_7
+package book.kotlin_in_action.part_2.chapter_07
 
 import java.math.BigDecimal
 

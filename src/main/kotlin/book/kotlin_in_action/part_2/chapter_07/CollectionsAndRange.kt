@@ -1,6 +1,4 @@
-package book.kotlin_in_action.part_2.chapter_7
-
-import java.time.LocalDate
+package book.kotlin_in_action.part_2.chapter_07
 
 fun main() {
     val map = mutableMapOf("1" to Point(1, 3))
