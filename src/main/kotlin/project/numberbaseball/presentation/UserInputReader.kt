@@ -1,4 +1,4 @@
-package project.numberbaseball.domain
+package project.numberbaseball.presentation
 
 interface UserInputReader {
     fun getGameRestartFlag(): Boolean

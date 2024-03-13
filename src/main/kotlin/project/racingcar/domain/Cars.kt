@@ -1,4 +1,4 @@
-package project.racingcar
+package project.racingcar.domain
 
 class Cars(
     private val _cars: List<Car>
@@ -6,6 +6,8 @@ class Cars(
 
     fun move(carMoveService: CarMoveService) {
         _cars.forEach{ carMoveService.move(it) }
+        //TODO 이것도 수정하면 좋을 듯
+        println()
     }
 
     val cars: List<Car>

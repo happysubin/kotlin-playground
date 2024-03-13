@@ -1,5 +1,7 @@
-package project.racingcar
+package project.racingcar.infra
 
+import project.racingcar.domain.Car
+import project.racingcar.domain.CarMoveService
 import kotlin.random.Random
 
 class RandomCarMoveService : CarMoveService {

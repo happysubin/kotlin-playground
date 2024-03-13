@@ -1,4 +1,4 @@
-package project.racingcar
+package project.racingcar.domain
 
 @FunctionalInterface
 interface CarMoveService {

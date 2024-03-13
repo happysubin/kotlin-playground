@@ -1,6 +1,7 @@
-package project.numberbaseball.application
+package project.numberbaseball
 
-import project.numberbaseball.domain.UserInputReader
+import project.numberbaseball.application.BaseBallGame
+import project.numberbaseball.presentation.UserInputReader
 import project.numberbaseball.infra.ConsoleReader
 import project.numberbaseball.domain.RandomBallsFactory
 import project.numberbaseball.infra.ResultViewImpl

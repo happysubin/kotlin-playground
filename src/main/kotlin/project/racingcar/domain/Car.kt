@@ -1,4 +1,4 @@
-package project.racingcar
+package project.racingcar.domain
 
 class Car(
     private val _name: String,
@@ -6,6 +6,8 @@ class Car(
 ) {
     fun move(moveValue: Int) {
         _position = _position.move(moveValue)
+        //TODO 옵저버 패턴을 적용해 리팩토링할 것
+        println(toString())
     }
 
     val name: String
@@ -28,4 +30,9 @@ class Car(
         result = 31 * result + _position.hashCode()
         return result
     }
+
+    override fun toString(): String {
+        return "$_name : $_position"
+    }
+
 }

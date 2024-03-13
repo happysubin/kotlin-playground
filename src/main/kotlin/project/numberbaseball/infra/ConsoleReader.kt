@@ -3,7 +3,7 @@ package project.numberbaseball.infra
 import project.numberbaseball.domain.Ball
 import project.numberbaseball.domain.Balls
 import project.numberbaseball.domain.BallsReader
-import project.numberbaseball.domain.UserInputReader
+import project.numberbaseball.presentation.UserInputReader
 import java.util.*
 
 class ConsoleReader: BallsReader, UserInputReader {
