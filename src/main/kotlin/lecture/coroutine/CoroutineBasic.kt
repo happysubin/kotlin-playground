@@ -5,7 +5,8 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.yield
 
 
-fun main() = runBlocking { //앞 세계와 코루틴 세계를 연결. runBlocking 내부부터 코루틴. 코루틴 1개
+//코루틴 빌더
+fun main(): Unit = runBlocking { //앞 세계와 코루틴 세계를 연결. runBlocking 내부부터 코루틴. 코루틴 1개
     printWithThread("start")
     launch { //반환 값이 없는 코루틴을 만든다. 현재 코루틴 2개
         newRoutine()
