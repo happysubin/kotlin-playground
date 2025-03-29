@@ -4,8 +4,8 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
 
     fun testRunning(){
         val wasRun = WasRun("testMethod")
-        println(wasRun.wasRun) //false
+        Assert.assertEquals(false, wasRun.wasRun)
         wasRun.run()
-        println(wasRun.wasRun) //true
+        Assert.assertEquals(true, wasRun.wasRun)
     }
 }

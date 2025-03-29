@@ -1,6 +1,6 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.9.25'
-    id it s'java'
+    id 'java'
 }
 
 group 'org.example'
