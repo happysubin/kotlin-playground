@@ -1,10 +1,11 @@
-package lecture.xunit
+package lecture.xunit.xunit
 
 
 /**
  * 일종의 애플리케이션 코드
  */
 class WasRun(methodName: String): TestCase(methodName) {
+
     var wasRun: Boolean
 
     init {
@@ -13,5 +14,9 @@ class WasRun(methodName: String): TestCase(methodName) {
 
     fun testMethod() {
         wasRun = true
+    }
+
+    override fun setUp() {
+        this.wasSetUp = true
     }
 }
