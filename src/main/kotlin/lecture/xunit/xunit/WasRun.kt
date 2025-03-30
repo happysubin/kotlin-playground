@@ -6,6 +6,7 @@ package lecture.xunit.xunit
  */
 class WasRun(methodName: String): TestCase(methodName) {
 
+    var log: String? = null
     var wasRun: Boolean
 
     init {
@@ -13,10 +14,12 @@ class WasRun(methodName: String): TestCase(methodName) {
     }
 
     fun testMethod() {
-        wasRun = true
+        this.wasRun = true
+        this.log += " testMethod"
     }
 
     override fun setUp() {
         this.wasSetUp = true
+        this.log = "setUp"
     }
 }
