@@ -6,7 +6,9 @@ abstract class TestCase(
     val methodName: String
 ) {
 
-    fun run() {
+    fun run(): TestResult {
+        val testResult = TestResult()
+        testResult.testStarted()
         setUp()
         try {
     //      val method = this.javaClass.getMethod(methodName)
@@ -23,6 +25,7 @@ abstract class TestCase(
             throw RuntimeException(e)
         }
         tearDown()
+        return testResult
     }
 
     protected open fun setUp() {}
