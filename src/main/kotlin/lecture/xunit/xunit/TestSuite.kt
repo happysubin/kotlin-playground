@@ -1,14 +1,14 @@
 package lecture.xunit.xunit
 
-class TestSuite {
+class TestSuite: Test {
 
-    val tests = mutableListOf<TestCase>()
+    val tests = mutableListOf< Test>()
 
-    fun add(wasRun: TestCase) {
+    fun add(wasRun: Test) {
         tests.add(wasRun)
     }
 
-    fun run(testResult: TestResult) {
+    override fun run(testResult: TestResult) {
         tests.forEach {
             it.run(testResult)
         }

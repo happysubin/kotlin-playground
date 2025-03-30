@@ -4,9 +4,9 @@ import java.lang.reflect.InvocationTargetException
 
 abstract class TestCase(
     val methodName: String
-) {
+): Test {
 
-    fun run(testResult: TestResult) {
+    override fun run(testResult: TestResult) {
         testResult.testStarted()
         setUp()
         try {

@@ -5,4 +5,12 @@ fun main() {
     val result = TestResult()
     testSuite.run(result)
     println(result.getSummary())
+
+    val testSuite2 = TestSuite()
+    testSuite2.add(TestCaseTest("testTemplateMethod"))
+    testSuite2.add(testSuite)
+    testSuite2.add(testSuite)
+    val result2 = TestResult()
+    testSuite2.run(result2)
+    println(result2.getSummary())
 }
