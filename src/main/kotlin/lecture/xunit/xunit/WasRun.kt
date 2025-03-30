@@ -13,7 +13,10 @@ class WasRun(methodName: String): TestCase(methodName) {
     }
 
     override fun setUp() {
-        this.wasSetUp = true
         this.log = "setUp"
+    }
+
+    override fun tearDown() {
+        this.log += " tearDown"
     }
 }

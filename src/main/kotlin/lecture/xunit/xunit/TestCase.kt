@@ -6,12 +6,6 @@ abstract class TestCase(
     val methodName: String
 ) {
 
-    var wasSetUp: Boolean
-
-    init {
-        wasSetUp = false
-    }
-
     fun run() {
         setUp()
         try {
@@ -28,7 +22,9 @@ abstract class TestCase(
         catch (e: NoSuchMethodException) {
             throw RuntimeException(e)
         }
+        tearDown()
     }
 
     protected open fun setUp() {}
+    protected open fun tearDown() {}
 }

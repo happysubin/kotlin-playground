@@ -4,12 +4,9 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
 
     var wasRun: WasRun? = null
 
-    override fun setUp() {
-        wasRun = WasRun("testMethod")
-    }
-
     fun testTemplateMethod()  {
+        wasRun = WasRun("testMethod")
         wasRun!!.run()
-        Assert.assertEquals("setUp testMethod", wasRun!!.log!!)
+        Assert.assertEquals("setUp testMethod tearDown", wasRun!!.log!!)
     }
 }
