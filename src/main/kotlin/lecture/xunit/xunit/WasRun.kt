@@ -7,14 +7,8 @@ package lecture.xunit.xunit
 class WasRun(methodName: String): TestCase(methodName) {
 
     var log: String? = null
-    var wasRun: Boolean
-
-    init {
-        wasRun = false
-    }
 
     fun testMethod() {
-        this.wasRun = true
         this.log += " testMethod"
     }
 
