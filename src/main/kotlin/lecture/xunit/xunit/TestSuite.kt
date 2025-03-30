@@ -10,12 +10,9 @@ class TestSuite {
         tests.add(wasRun)
     }
 
-    fun run(testResult: TestResult): TestResult {
-        val testResult =  TestResult()
+    fun run(testResult: TestResult) {
         tests.forEach {
             it.run(testResult)
         }
-        return testResult
     }
-
 }
