@@ -12,6 +12,10 @@ class WasRun(methodName: String): TestCase(methodName) {
         this.log += " testMethod"
     }
 
+    fun testBrokenMethod() {
+        throw AssertionError()
+    }
+
     override fun setUp() {
         this.log = "setUp"
     }

@@ -6,8 +6,7 @@ abstract class TestCase(
     val methodName: String
 ) {
 
-    fun run(): TestResult {
-        val testResult = TestResult()
+    fun run(testResult: TestResult) {
         testResult.testStarted()
         setUp()
         try {
@@ -15,17 +14,14 @@ abstract class TestCase(
             val method = this::class.java.getMethod(methodName)
             method.invoke(this)
         }
-        catch (e: IllegalAccessException) {
-            throw RuntimeException(e)
+        catch(e: Exception) {
+            testResult.testFailed()
         }
-        catch (e: InvocationTargetException) {
-            throw RuntimeException(e)
-        }
-        catch (e: NoSuchMethodException) {
-            throw RuntimeException(e)
-        }
+//        catch (e: ReflectiveOperationException) { //상위 예외로 catch
+//            throw RuntimeException(e)
+//        }
+
         tearDown()
-        return testResult
     }
 
     protected open fun setUp() {}

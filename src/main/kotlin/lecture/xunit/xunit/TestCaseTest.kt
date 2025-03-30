@@ -15,4 +15,25 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         val result: TestResult = wasRun!!.run()
         Assert.assertEquals("1 run, 0 failed", result.getSummary())
     }
+
+    fun testFailedResultFormatting() {
+        val result = TestResult()
+        result.testStarted()
+        result.testFailed()
+        Assert.assertEquals("1 run, 1 failed", result.getSummary())
+    }
+
+    fun testFailedResult() {
+        wasRun = WasRun("testBrokenMethod")
+        val result: TestResult = wasRun!!.run()
+        Assert.assertEquals("1 run, 1 failed", result.getSummary())
+    }
+
+    fun testSuite() {
+        val testSuite = TestSuite()
+        testSuite.add(WasRun("testMethod"))
+        testSuite.add(WasRun("testBrokenMethod"))
+        val result = testSuite.run()
+        Assert.assertEquals("2 run, 1 failed", result.getSummary())
+    }
 }
