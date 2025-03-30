@@ -6,5 +6,6 @@ fun main() {
     TestCaseTest("testResult").run(result)
     TestCaseTest("testFailedResultFormatting").run(result)
     TestCaseTest("testFailedResult").run(result)
+    TestCaseTest("testSuite").run(result)
     println(result.getSummary())
 }
