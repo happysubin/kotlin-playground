@@ -1,4 +1,4 @@
-package book.tdd.part02
+package book.tdd.part02.xunit
 
 abstract class TestCase(val methodName: String) {
     fun run() {

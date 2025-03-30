@@ -1,4 +1,4 @@
-package book.tdd.part02
+package book.tdd.part02.xunit
 
 class TestCaseTest(methodName: String): TestCase(methodName) {
 
