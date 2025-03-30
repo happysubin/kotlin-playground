@@ -1,6 +1,4 @@
-package lecture.xunit.xunit
-
-import java.lang.reflect.InvocationTargetException
+package lecture.toby_xunit.xunit
 
 abstract class TestCase(
     private val methodName: String

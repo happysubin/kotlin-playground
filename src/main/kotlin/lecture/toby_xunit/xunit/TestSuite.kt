@@ -1,6 +1,6 @@
-package lecture.xunit.xunit
+package lecture.toby_xunit.xunit
 
-import lecture.xunit.xunit.annotation.TestAnnotation
+import lecture.toby_xunit.xunit.annotation.TestAnnotation
 
 
 class TestSuite : Test {

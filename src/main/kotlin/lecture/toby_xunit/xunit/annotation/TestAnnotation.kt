@@ -1,4 +1,4 @@
-package lecture.xunit.xunit.annotation
+package lecture.toby_xunit.xunit.annotation
 
 @Target(AnnotationTarget.FUNCTION)
 @Retention(AnnotationRetention.RUNTIME)

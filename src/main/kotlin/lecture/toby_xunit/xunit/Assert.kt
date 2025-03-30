@@ -1,4 +1,4 @@
-package lecture.xunit.xunit
+package lecture.toby_xunit.xunit
 
 object Assert {
     fun assertEquals(expected: Any, actual: Any) {

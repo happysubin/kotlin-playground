@@ -1,4 +1,4 @@
-package lecture.xunit.xunit
+package lecture.toby_xunit.xunit
 
 fun main() {
     val testSuite = TestCaseTest.suite()
