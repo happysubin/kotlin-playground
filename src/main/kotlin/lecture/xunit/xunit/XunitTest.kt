@@ -6,7 +6,7 @@ fun main() {
     testSuite.run(result)
     println(result.getSummary())
 
-    val testSuite2 = TestSuite()
+    val testSuite2 = TestSuite(TestCaseTest::class.java)
     testSuite2.add(TestCaseTest("testTemplateMethod"))
     testSuite2.add(testSuite)
     testSuite2.add(testSuite)

@@ -3,7 +3,7 @@ package lecture.xunit.xunit
 import java.lang.reflect.InvocationTargetException
 
 abstract class TestCase(
-    val methodName: String
+    private val methodName: String
 ): Test {
 
     override fun run(testResult: TestResult) {
@@ -17,9 +17,6 @@ abstract class TestCase(
         catch(e: Exception) {
             testResult.testFailed()
         }
-//        catch (e: ReflectiveOperationException) { //상위 예외로 catch
-//            throw RuntimeException(e)
-//        }
 
         tearDown()
     }
