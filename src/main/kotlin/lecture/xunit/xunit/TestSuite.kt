@@ -1,12 +1,10 @@
 package lecture.xunit.xunit
 
-import jdk.incubator.vector.VectorOperators
-
 class TestSuite {
 
-    val tests = mutableListOf<WasRun>()
+    val tests = mutableListOf<TestCase>()
 
-    fun add(wasRun: WasRun) {
+    fun add(wasRun: TestCase) {
         tests.add(wasRun)
     }
 

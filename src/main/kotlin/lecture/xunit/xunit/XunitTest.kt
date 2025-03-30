@@ -1,11 +1,13 @@
 package lecture.xunit.xunit
 
 fun main() {
+    val testSuite = TestSuite()
     val result = TestResult()
-    TestCaseTest("testTemplateMethod").run(result)
-    TestCaseTest("testResult").run(result)
-    TestCaseTest("testFailedResultFormatting").run(result)
-    TestCaseTest("testFailedResult").run(result)
-    TestCaseTest("testSuite").run(result)
+    testSuite.add(TestCaseTest("testTemplateMethod"))
+    testSuite.add(TestCaseTest("testResult"))
+    testSuite.add(TestCaseTest("testFailedResultFormatting"))
+    testSuite.add(TestCaseTest("testFailedResult"))
+    testSuite.add(TestCaseTest("testSuite"))
+    testSuite.run(result)
     println(result.getSummary())
 }
