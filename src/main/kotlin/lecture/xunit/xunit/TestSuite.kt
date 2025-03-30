@@ -1,5 +1,7 @@
 package lecture.xunit.xunit
 
+import lecture.xunit.xunit.annotation.TestAnnotation
+
 
 class TestSuite : Test {
 
@@ -9,7 +11,10 @@ class TestSuite : Test {
         try {
             testClass
                 .declaredMethods
-                .filter { it.name.startsWith("test") }
+                .filter {
+                    it.isAnnotationPresent(TestAnnotation::class.java)
+//                    it.name.startsWith("test")
+                }
                 .forEach {
                     //테스트 케이스의 생성자는 String이 넘어가므로 String을 사용. 그리고 메서드 이름을 넘김
                     add(testClass.getConstructor(String::class.java).newInstance(it.name))

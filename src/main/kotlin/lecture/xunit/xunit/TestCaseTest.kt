@@ -1,5 +1,7 @@
 package lecture.xunit.xunit
 
+import lecture.xunit.xunit.annotation.TestAnnotation
+
 class TestCaseTest(methodName: String): TestCase(methodName) {
 
     var wasRun: WasRun? = null
@@ -10,6 +12,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         }
     }
 
+    @TestAnnotation
     fun testTemplateMethod()  {
         wasRun = WasRun("testMethod")
         val result = TestResult()
@@ -17,6 +20,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         Assert.assertEquals("setUp testMethod tearDown", wasRun!!.log!!)
     }
 
+    @TestAnnotation
     fun testResult() {
         wasRun = WasRun("testMethod")
         val result = TestResult()
@@ -24,6 +28,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         Assert.assertEquals("1 run, 0 failed", result.getSummary())
     }
 
+    @TestAnnotation
     fun testFailedResultFormatting() {
         val result = TestResult()
         result.testStarted()
@@ -31,6 +36,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         Assert.assertEquals("1 run, 1 failed", result.getSummary())
     }
 
+    @TestAnnotation
     fun testFailedResult() {
         wasRun = WasRun("testBrokenMethod")
         val result = TestResult()
@@ -38,6 +44,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         Assert.assertEquals("1 run, 1 failed", result.getSummary())
     }
 
+    @TestAnnotation
     fun testSuite() {
         val testSuite = TestSuite()
         testSuite.add(WasRun("testMethod"))
