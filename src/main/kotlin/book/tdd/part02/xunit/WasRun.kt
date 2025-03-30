@@ -7,10 +7,14 @@ package book.tdd.part02.xunit
  */
 class WasRun(methodName: String): TestCase(methodName) {
 
-    var wasRun: Boolean
+    var wasRun: Boolean? = null
 
     init {
         wasRun = false
+    }
+
+    override fun setUp() {
+        this.wasSetUp = true
     }
 
     fun testMethod() {
