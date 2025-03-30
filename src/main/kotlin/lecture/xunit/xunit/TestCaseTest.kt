@@ -29,7 +29,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
     }
 
     @TestAnnotation
-    fun testFailedResultFormatting() {
+    fun failedResultFormatting() {
         val result = TestResult()
         result.testStarted()
         result.testFailed()
