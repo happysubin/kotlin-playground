@@ -4,6 +4,18 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
 
     var wasRun: WasRun? = null
 
+    companion object {
+        fun suite(): TestSuite {
+            val suite = TestSuite()
+            suite.add(TestCaseTest("testTemplateMethod"))
+            suite.add(TestCaseTest("testResult"))
+            suite.add(TestCaseTest("testFailedResultFormatting"))
+            suite.add(TestCaseTest("testFailedResult"))
+            suite.add(TestCaseTest("testSuite"))
+            return suite
+        }
+    }
+
     fun testTemplateMethod()  {
         wasRun = WasRun("testMethod")
         val result = TestResult()
