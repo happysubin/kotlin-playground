@@ -19,6 +19,10 @@ class WasRun(methodName: String): TestCase(methodName) {
         log += "setUp "
     }
 
+    override fun tearDown() {
+        log += " tearDown"
+    }
+
     fun testMethod() {
         wasRun = true
         log += "testMethod"

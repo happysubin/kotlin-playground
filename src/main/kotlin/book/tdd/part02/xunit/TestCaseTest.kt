@@ -10,6 +10,6 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
 
     fun testTemplateMethod() {
         test?.run()
-        Assert.assertEqual("setUp testMethod", test!!.log)
+        Assert.assertEqual("setUp testMethod tearDown", test!!.log)
     }
 }

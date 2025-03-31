@@ -16,7 +16,9 @@ abstract class TestCase(private val methodName: String) {
         } catch (e: ReflectiveOperationException) {
             throw RuntimeException(e)
         }
+        tearDown()
     }
 
     protected open fun setUp() {}
+    protected open fun tearDown() {}
 }
