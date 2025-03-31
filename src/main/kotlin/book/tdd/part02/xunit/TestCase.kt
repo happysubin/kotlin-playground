@@ -8,15 +8,18 @@ abstract class TestCase(private val methodName: String) {
         wasSetUp = false
     }
 
-    fun run() {
+    fun run(): TestResult {
         setUp()
+        val result = TestResult()
+        result.testStarted()
         try {
             val method = this::class.java.getMethod(methodName)
             method.invoke(this)
-        } catch (e: ReflectiveOperationException) {
-            throw RuntimeException(e)
+        } catch(e: Exception) {
+            result.testFailed()
         }
         tearDown()
+        return result
     }
 
     protected open fun setUp() {}

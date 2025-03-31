@@ -12,4 +12,14 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         test?.run()
         Assert.assertEqual("setUp testMethod tearDown", test!!.log)
     }
+
+    fun testResult() {
+        val result: TestResult = test?.run()!!
+        Assert.assertEqual("1 run, 0 failed", result.getSummary())
+    }
+
+    fun testFailedResult() {
+        val result: TestResult = test?.run()!!
+        Assert.assertEqual("1 run, 0 failed", result.getSummary())
+    }
 }

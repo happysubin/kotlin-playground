@@ -27,4 +27,8 @@ class WasRun(methodName: String): TestCase(methodName) {
         wasRun = true
         log += "testMethod"
     }
+
+    fun testBrokenMethod() {
+        throw AssertionError()
+    }
 }
