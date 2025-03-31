@@ -1,6 +1,5 @@
 package book.tdd.part02.xunit
 
 fun main() {
-    TestCaseTest("testRunning").run()
-    TestCaseTest("testSetUp").run()
+    TestCaseTest("testTemplateMethod").run()
 }

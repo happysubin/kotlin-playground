@@ -8,12 +8,7 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
         this.test = WasRun("testMethod")
     }
 
-    fun testRunning() {
-        test?.run()
-        Assert.assertEqual("setUp ", test!!.log)
-    }
-
-    fun testSetUp() {
+    fun testTemplateMethod() {
         test?.run()
         Assert.assertEqual("setUp testMethod", test!!.log)
     }
