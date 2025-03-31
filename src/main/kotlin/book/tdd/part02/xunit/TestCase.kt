@@ -1,6 +1,6 @@
 package book.tdd.part02.xunit
 
-abstract class TestCase(val methodName: String) {
+abstract class TestCase(private val methodName: String) {
 
     var wasSetUp: Boolean? = null
 

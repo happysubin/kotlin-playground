@@ -8,6 +8,7 @@ package book.tdd.part02.xunit
 class WasRun(methodName: String): TestCase(methodName) {
 
     var wasRun: Boolean? = null
+    var log: String = ""
 
     init {
         wasRun = false
@@ -15,9 +16,11 @@ class WasRun(methodName: String): TestCase(methodName) {
 
     override fun setUp() {
         this.wasSetUp = true
+        log += "setUp "
     }
 
     fun testMethod() {
         wasRun = true
+        log += "testMethod"
     }
 }

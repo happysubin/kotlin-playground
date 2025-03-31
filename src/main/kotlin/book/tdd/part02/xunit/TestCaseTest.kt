@@ -9,14 +9,12 @@ class TestCaseTest(methodName: String): TestCase(methodName) {
     }
 
     fun testRunning() {
-        Assert.assertEqual(false, test?.wasRun!!)
         test?.run()
-        Assert.assertEqual(true, test?.wasRun!!)
+        Assert.assertEqual("setUp ", test!!.log)
     }
 
     fun testSetUp() {
-        Assert.assertEqual(false, test?.wasSetUp!!)
         test?.run()
-        Assert.assertEqual(true, test?.wasSetUp!!)
+        Assert.assertEqual("setUp testMethod", test!!.log)
     }
 }
