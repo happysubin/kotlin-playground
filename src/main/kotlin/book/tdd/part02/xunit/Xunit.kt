@@ -1,8 +1,15 @@
 package book.tdd.part02.xunit
 
 fun main() {
-    println(TestCaseTest("testTemplateMethod").run().getSummary())
-    println(TestCaseTest("testResult").run().getSummary())
-    println(TestCaseTest("testFailedResult").run().getSummary())
-    println(TestCaseTest("testResultFormatting").run().getSummary())
+    val suite = TestSuite()
+
+    suite.add(TestCaseTest("testTemplateMethod"))
+    suite.add(TestCaseTest("testResult"))
+    suite.add(TestCaseTest("testFailedResult"))
+    suite.add(TestCaseTest("testResultFormatting"))
+    suite.add(TestCaseTest("testSuite"))
+
+    val result = TestResult()
+    suite.run(result)
+    println(result.getSummary())
 }

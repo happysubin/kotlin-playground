@@ -8,9 +8,8 @@ abstract class TestCase(private val methodName: String) {
         wasSetUp = false
     }
 
-    fun run(): TestResult {
+    fun run(result: TestResult) {
         setUp()
-        val result = TestResult()
         result.testStarted()
         try {
             val method = this::class.java.getMethod(methodName)
@@ -19,7 +18,6 @@ abstract class TestCase(private val methodName: String) {
             result.testFailed()
         }
         tearDown()
-        return result
     }
 
     protected open fun setUp() {}
