@@ -1,13 +1,13 @@
 package book.tdd.part02.xunit
 
-class TestSuite {
+class TestSuite: Test {
 
-    val tests = mutableListOf<TestCase>()
-    fun add(test: TestCase) {
+    val tests = mutableListOf<Test>()
+    fun add(test: Test) {
         tests.add(test)
     }
 
-    fun run(result: TestResult) {
+    override fun run(result: TestResult) {
         tests.forEach {
             it.run(result)
         }

@@ -5,7 +5,7 @@ import lecture.toby_xunit.xunit.annotation.TestAnnotation
 
 class TestSuite : Test {
 
-    private val tests = mutableListOf< Test>()
+    private val tests = mutableListOf<Test>()
 
     constructor(testClass: Class<out TestCase>) {
         try {

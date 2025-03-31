@@ -1,6 +1,6 @@
 package book.tdd.part02.xunit
 
-abstract class TestCase(private val methodName: String) {
+abstract class TestCase(private val methodName: String): Test {
 
     var wasSetUp: Boolean? = null
 
@@ -8,7 +8,7 @@ abstract class TestCase(private val methodName: String) {
         wasSetUp = false
     }
 
-    fun run(result: TestResult) {
+    override fun run(result: TestResult) {
         setUp()
         result.testStarted()
         try {

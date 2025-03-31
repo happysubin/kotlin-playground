@@ -9,3 +9,4 @@
 - [X] WasRun에 로그 문자열 남기기
 - [X] 실패한 테스트 보고하기 
 - [ ] setUp 에러를 잡아서 보고하기
+- [ ] TetCase 클래스에서 TestSuite 생성하기
