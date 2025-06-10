@@ -1,4 +1,11 @@
-gradle/**
-.idea/**
-**/build/**
-.gradle
+.idea
+.gradle/**
+build
+*/out
+*/build
+**/bin
+.DS_Store
+*.log
+.env*
+
+
