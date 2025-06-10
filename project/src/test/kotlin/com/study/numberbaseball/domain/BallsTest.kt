@@ -14,7 +14,7 @@ class BallsTest {
 
         val result = userBalls.play(computerBalls)
 
-        assertEquals(result, kotlin.Result(3, 0))
+        assertEquals(result, Result(3, 0))
     }
 
     @Test
@@ -25,7 +25,7 @@ class BallsTest {
 
         val result = userBalls.play(computerBalls)
 
-        assertEquals(result, kotlin.Result(2, 0))
+        assertEquals(result, Result(2, 0))
     }
 
     @Test
@@ -36,7 +36,7 @@ class BallsTest {
 
         val result = userBalls.play(computerBalls)
 
-        assertEquals(result, kotlin.Result(1, 0))
+        assertEquals(result, Result(1, 0))
     }
 
     @Test
@@ -47,7 +47,7 @@ class BallsTest {
 
         val result = userBalls.play(computerBalls)
 
-        assertEquals(result, kotlin.Result(0, 0))
+        assertEquals(result, Result(0, 0))
     }
 
     @Test
@@ -59,7 +59,7 @@ class BallsTest {
         val result = userBalls.play(computerBalls)
 
         println(result)
-        assertEquals(result, kotlin.Result(0, 1))
+        assertEquals(result, Result(0, 1))
     }
 
     @Test
@@ -71,7 +71,7 @@ class BallsTest {
         val result = userBalls.play(computerBalls)
 
         println(result)
-        assertEquals(result, kotlin.Result(0, 2))
+        assertEquals(result, Result(0, 2))
     }
 
     @Test
@@ -83,7 +83,7 @@ class BallsTest {
         val result = userBalls.play(computerBalls)
 
         println(result)
-        assertEquals(result, kotlin.Result(0, 3))
+        assertEquals(result, Result(0, 3))
     }
 
 }

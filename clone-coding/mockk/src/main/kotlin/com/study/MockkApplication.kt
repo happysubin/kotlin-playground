@@ -1,11 +1,5 @@
 package com.study
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+fun main() {
 
-@SpringBootApplication
-class MockkApplication
-
-fun main(args: Array<String>) {
-    runApplication<MockkApplication>(*args)
 }

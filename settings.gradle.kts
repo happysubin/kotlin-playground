@@ -1,4 +1,4 @@
-rootProject.name = "kotlin-study"
+rootProject.name = "kotlin-playground"
 
 include(
     "clone-coding:mockk",
