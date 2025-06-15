@@ -1,4 +1,4 @@
-package com.study.coroutine
+package com.study.inflearn.coroutine
 
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
