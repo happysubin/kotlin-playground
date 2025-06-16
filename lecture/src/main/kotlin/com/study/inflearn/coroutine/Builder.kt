@@ -39,7 +39,6 @@ fun ex6(): Unit = runBlocking {
     }
     println("times3 = ${times3}")
 
-
     val times4 = measureTimeMillis {
         val job1 = async(start = CoroutineStart.LAZY){ apiCall1() }
         val job2 = async(start = CoroutineStart.LAZY){ apiCall2() }
