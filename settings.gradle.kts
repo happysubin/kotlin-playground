@@ -5,6 +5,7 @@ include(
     "lecture",
     "project",
     "book",
+    "db-lab"
 )
 
 
