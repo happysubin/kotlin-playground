@@ -3,3 +3,11 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
+
+decorator:
+  datasource:
+    datasource-proxy:
+      multiline: true
+      format-sql: true
+      json-format: true
+      count-query: true

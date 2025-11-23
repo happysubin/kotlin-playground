@@ -20,6 +20,13 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+//    implementation("net.ttddyy:datasource-proxy:1.10")
+//    testImplementation("net.ttddyy:datasource-proxy:1.10")
+    implementation("io.hypersistence:hypersistence-utils-hibernate-63:3.12.0")
+    implementation("com.github.gavlyukovskiy:datasource-proxy-spring-boot-starter:1.12.1")
+
+
 }
 
 allOpen {
